@@ -1,0 +1,127 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated to gamified learning platform color palette */
+  --background: oklch(1 0 0); /* #ffffff - Main background */
+  --foreground: oklch(0.2 0 0); /* #1f2937 - Text color */
+  --card: oklch(0.98 0.02 195); /* #ecfeff - Card background */
+  --card-foreground: oklch(0.45 0 0); /* #475569 - Card text */
+  --popover: oklch(1 0 0); /* #ffffff - Popover background */
+  --popover-foreground: oklch(0.2 0 0); /* #1f2937 - Popover text */
+  --primary: oklch(0.35 0.08 195); /* #164e63 - Main interactive elements */
+  --primary-foreground: oklch(1 0 0); /* #ffffff - Text on primary */
+  --secondary: oklch(0.6 0.15 264); /* #6366f1 - Accent elements */
+  --secondary-foreground: oklch(1 0 0); /* #ffffff - Text on secondary */
+  --muted: oklch(0.98 0 0); /* #f8fafc - Muted background */
+  --muted-foreground: oklch(0.2 0 0); /* #1f2937 - Muted text */
+  --accent: oklch(0.6 0.15 264); /* #6366f1 - Badges and progress */
+  --accent-foreground: oklch(1 0 0); /* #ffffff - Text on accent */
+  --destructive: oklch(0.55 0.22 25); /* #ef4444 - Error messages */
+  --destructive-foreground: oklch(1 0 0); /* #ffffff - Text on destructive */
+  --border: oklch(0.85 0 0); /* #d1d5db - Borders */
+  --input: oklch(0.95 0 0); /* #f1f5f9 - Input background */
+  --ring: oklch(0.6 0.15 264 / 0.5); /* Focus ring color */
+  --chart-1: oklch(0.65 0.15 220); /* #60a5fa - Progress tracking */
+  --chart-2: oklch(0.75 0.15 85); /* #fbbf24 - Progress tracking */
+  --chart-3: oklch(0.7 0.15 160); /* #34d399 - Progress tracking */
+  --chart-4: oklch(0.7 0.15 330); /* #f472b6 - Progress tracking */
+  --chart-5: oklch(0.65 0.15 35); /* #f97316 - Progress tracking */
+  --radius: 0.5rem; /* Corner rounding */
+  --sidebar: oklch(0.98 0 0); /* #f8fafc - Sidebar background */
+  --sidebar-foreground: oklch(0.2 0 0); /* #1f2937 - Sidebar text */
+  --sidebar-primary: oklch(0.35 0.08 195); /* #164e63 - Sidebar primary */
+  --sidebar-primary-foreground: oklch(1 0 0); /* Text on sidebar primary */
+  --sidebar-accent: oklch(0.6 0.15 264); /* #6366f1 - Sidebar accent */
+  --sidebar-accent-foreground: oklch(1 0 0); /* Text on sidebar accent */
+  --sidebar-border: oklch(0.85 0 0); /* #d1d5db - Sidebar border */
+  --sidebar-ring: oklch(0.6 0.15 264 / 0.5); /* Sidebar focus ring */
+}
+
+.dark {
+  /* Updated dark mode colors for gamified theme */
+  --background: oklch(0.15 0 0); /* Dark background */
+  --foreground: oklch(0.95 0 0); /* Light text */
+  --card: oklch(0.2 0 0); /* Dark card background */
+  --card-foreground: oklch(0.9 0 0); /* Light card text */
+  --popover: oklch(0.15 0 0); /* Dark popover */
+  --popover-foreground: oklch(0.95 0 0); /* Light popover text */
+  --primary: oklch(0.4 0.1 195); /* Lighter primary for dark mode */
+  --primary-foreground: oklch(1 0 0); /* White text on primary */
+  --secondary: oklch(0.65 0.15 264); /* Brighter secondary for dark mode */
+  --secondary-foreground: oklch(1 0 0); /* White text on secondary */
+  --muted: oklch(0.25 0 0); /* Dark muted background */
+  --muted-foreground: oklch(0.7 0 0); /* Light muted text */
+  --accent: oklch(0.65 0.15 264); /* Bright accent for dark mode */
+  --accent-foreground: oklch(1 0 0); /* White text on accent */
+  --destructive: oklch(0.5 0.2 25); /* Darker destructive for dark mode */
+  --destructive-foreground: oklch(1 0 0); /* White text on destructive */
+  --border: oklch(0.3 0 0); /* Dark borders */
+  --input: oklch(0.25 0 0); /* Dark input background */
+  --ring: oklch(0.65 0.15 264 / 0.5); /* Focus ring for dark mode */
+  --chart-1: oklch(0.6 0.15 220); /* Chart colors for dark mode */
+  --chart-2: oklch(0.7 0.15 85);
+  --chart-3: oklch(0.65 0.15 160);
+  --chart-4: oklch(0.65 0.15 330);
+  --chart-5: oklch(0.6 0.15 35);
+  --sidebar: oklch(0.18 0 0); /* Dark sidebar */
+  --sidebar-foreground: oklch(0.95 0 0); /* Light sidebar text */
+  --sidebar-primary: oklch(0.4 0.1 195); /* Sidebar primary for dark */
+  --sidebar-primary-foreground: oklch(1 0 0); /* Text on sidebar primary */
+  --sidebar-accent: oklch(0.65 0.15 264); /* Sidebar accent for dark */
+  --sidebar-accent-foreground: oklch(1 0 0); /* Text on sidebar accent */
+  --sidebar-border: oklch(0.3 0 0); /* Dark sidebar border */
+  --sidebar-ring: oklch(0.65 0.15 264 / 0.5); /* Sidebar focus ring */
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
