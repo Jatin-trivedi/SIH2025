@@ -40,7 +40,7 @@ export function Navigation() {
             <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
               <BookOpen className="w-5 h-5 text-primary-foreground" />
             </div>
-            <span className="font-bold text-lg hidden sm:inline">LearnPlay</span>
+            <span className="font-bold text-lg hidden sm:inline">CodeBlooded</span>
           </Link>
 
           {/* Desktop Navigation */}
